@@ -37,8 +37,9 @@ exports.tRetweetby = function(tweetID){
   function (e, data, res){
     if (e) console.error(e);
     data = JSON.parse(data);
+    console.log(data);
     for (var i=0;i<data.length;i++){
-      console.log(data[i].user.screen_name);
+      console.log(data[i].user.screen_name+': '+data[i].created_at);
     }
   });
 };
